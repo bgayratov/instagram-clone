@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1.5px solid black;
+  padding: 5px;
+}
+
+@font-face {
+  font-family: "Segoe";
+  src: url("../../assest/fonts/"); /* IE9*/
+  src: url("../../assest/fonts/?#iefix") format("embedded-opentype"), url("../../assest/fonts/4735dd9ca25670c44600021e7428b8d3.woff2") format("woff2"), url("../../assest/fonts/4735dd9ca25670c44600021e7428b8d3.woff") format("woff"), url("../../assest/fonts/4735dd9ca25670c44600021e7428b8d3.ttf") format("truetype"), url("../../assest/fonts/4735dd9ca25670c44600021e7428b8d3.svg#Segoe") format("svg"); /* iOS 4.1- */
+}
+.container {
+  width: 100%;
+  max-width: 986;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*--- HEADER START ---*/
+/*--- HEADER END ---*//*# sourceMappingURL=main.css.map */
