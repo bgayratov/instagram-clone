@@ -1,9 +1,14 @@
 @import '../mixins', '../normalize', '../variables', './fonts';
 
+.wrapper {
+    font-family: 'Segoe UI', sans-serif;
+    font-style: normal;
+}
+
 
 .container {
     width: 100%;
-    max-width: 986px;
+    max-width: 946px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -16,20 +21,40 @@
     left: 0;
     width: 100%;
     padding: 9px 0;
+    background-color: $white;
     border-bottom: 1px solid $border-color;
+    z-index: 10;
 
     &-row {
         @include flex (space-between, center);
     }
 
+    &-search {
+        border: 1px solid $border-color;
+        border-radius: 3px;
+        padding: 0 9px;
+
+        input {
+            border: none;
+            outline: none;
+            padding: 9px 25px 9px 0;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 129%;
+            color: $gray;
+        }
+    }
+
     &-navbar {
         position: relative;
 
-        &-icon {
+        &_icon {
+            width: 22px;
+            height: 22px;
             position: relative;
-            svg {
-                fill: #fff;
 
+            &:not(:last-child) {
+                margin-right: 22px;
             }
         }
     }
@@ -37,10 +62,165 @@
 
 /*--- HEADER END ---*/
 
+
+
 /*--- MAIN START ---*/
 
 .main {
     padding-top: 82px;
+
+
+    &-row {
+        position: relative;
+    }
+
+    &-left {
+        width: calc(($containerWidth * 64.9) / 100);
+        min-height: 100%;
+        border: 1px solid $border-color;
+
+        &_top {
+            position: relative;
+            border-bottom: .5px solid $border-color;
+            padding: 18px 0 18px 24px;
+
+            &-stories {
+                @include flex(space-between, center)
+            }
+
+            &-story {
+                position: relative;
+
+                &-title {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 133%;
+                    text-align: center;
+                    letter-spacing: 0.12px;
+                    text-transform: lowercase;
+                }
+            }
+        }
+
+        &_bottom {
+            position: relative;
+
+
+            &-up {
+                position: relative;
+                padding: 9px 16px;
+                @include flex(space-between, center);
+
+
+                &-title {
+                    position: relative;
+                    top: -16px;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 129% px;
+                    text-transform: lowercase;
+                }
+            }
+
+            &-down {
+
+                &-img {
+                    position: relative;
+                    width: 100%;
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &-items {
+                    position: relative;
+                    padding: 0 0 0 16px;
+
+                    &-com {
+                        position: relative;
+
+                        &-title {
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 129%;
+
+                            &-plus {
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 129%;
+                            }
+                        }
+
+                        &-subtitle {
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 139%;
+                            color: $gray;
+
+                            &-plus {
+                                font-weight: 400;
+                                font-size: 10px;
+                                line-height: 190%;
+                                letter-spacing: 0.2px;
+                                text-transform: uppercase;
+                                color: $gray;
+                                margin-bottom: 17px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-down-btns {
+                @include flex(space-between, center)
+            }
+
+            &-down-btn {
+                padding: 15px 5px;
+                background-color: $white;
+            }
+        }
+    }
+
+    &-right {
+        position: fixed;
+        width: calc($containerWidth - ($containerWidth * 64.9 / 100) - 30px);
+        top: 82px;
+        right: calc((100vw - $containerWidth) / 2);
+        border: 1px solid red;
+    }
 }
 
+.comments {
+    @include flex(space-between, center);
+    border-top: 1px solid $border-color;
+    padding: 10px 11px;
+
+    input {
+        position: relative;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        top: -6px;
+        margin-left: 16px;
+    }
+
+    .post {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 129%;
+        color: $lightbluea;
+    }
+
+}
+
+.comment {
+    text-align: center;
+    padding-top: 7px;
+}
 /*--- MAIN END ---*/
