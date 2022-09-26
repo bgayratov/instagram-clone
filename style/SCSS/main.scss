@@ -1,17 +1,46 @@
-
-
 @import '../mixins', '../normalize', '../variables', './fonts';
 
 
-.container{
+.container {
     width: 100%;
-    max-width: 986;
+    max-width: 986px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 /*--- HEADER START ---*/
 
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 9px 0;
+    border-bottom: 1px solid $border-color;
 
+    &-row {
+        @include flex (space-between, center);
+    }
+
+    &-navbar {
+        position: relative;
+
+        &-icon {
+            position: relative;
+            svg {
+                fill: #fff;
+
+            }
+        }
+    }
+}
 
 /*--- HEADER END ---*/
+
+/*--- MAIN START ---*/
+
+.main {
+    padding-top: 82px;
+}
+
+/*--- MAIN END ---*/

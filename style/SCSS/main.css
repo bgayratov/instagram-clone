@@ -34,10 +34,39 @@ th, td {
 }
 .container {
   width: 100%;
-  max-width: 986;
+  max-width: 986px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 /*--- HEADER START ---*/
-/*--- HEADER END ---*//*# sourceMappingURL=main.css.map */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 9px 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-navbar {
+  position: relative;
+}
+.header-navbar-icon {
+  position: relative;
+}
+.header-navbar-icon svg {
+  fill: #fff;
+}
+
+/*--- HEADER END ---*/
+/*--- MAIN START ---*/
+.main {
+  padding-top: 82px;
+}
+
+/*--- MAIN END ---*//*# sourceMappingURL=main.css.map */
