@@ -304,4 +304,10 @@ th, td {
   text-transform: none;
 }
 
+.btn-arrow {
+  position: absolute;
+  right: 0;
+  z-index: 3;
+}
+
 /*--- MAIN END ---*//*# sourceMappingURL=main.css.map */
