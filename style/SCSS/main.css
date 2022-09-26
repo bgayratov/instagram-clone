@@ -96,7 +96,7 @@ th, td {
   position: relative;
 }
 .main-left {
-  width: 613.954px;
+  width: 588.954px;
   min-height: 100%;
   border: 1px solid #dbdbdb;
 }
@@ -194,9 +194,64 @@ th, td {
 .main-right {
   position: fixed;
   width: 302.046px;
-  top: 82px;
+  top: 102px;
   right: calc((100vw - 946px) / 2);
-  border: 1px solid red;
+}
+.main-right_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.main-right_head-right-text {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 133%;
+  text-transform: capitalize;
+  color: #0095F6;
+}
+.main-right_head-left {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+}
+.main-right_head-left-img {
+  margin-right: 24px;
+}
+.main-right_head-left-words {
+  font-size: 14px;
+  line-height: 129%;
+}
+.main-right_head-left-title {
+  font-weight: 600;
+  text-transform: lowercase;
+}
+.main-right_head-left-subtitle {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.main-right_body {
+  position: relative;
+}
+.main-right_body-way {
+  position: relative;
+}
+.main-right_body-way-suggest {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.main-right_body-way-suggest-title {
+  font-size: 14px;
+  line-height: 129%;
+  color: gray;
+}
+.main-right_body-way-suggest-subtitle {
+  font-size: 12px;
+  line-height: 133%;
 }
 
 .comments {
@@ -220,10 +275,33 @@ th, td {
   line-height: 129%;
   color: lightblue;
 }
+.comments .post:hover {
+  color: #0095F6;
+}
 
 .comment {
   text-align: center;
   padding-top: 7px;
+}
+
+.second-title {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 79%;
+  text-transform: lowercase;
+  margin-bottom: 10px;
+}
+
+.second-subtitle {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 92%;
+  color: gray;
+  text-transform: none;
 }
 
 /*--- MAIN END ---*//*# sourceMappingURL=main.css.map */

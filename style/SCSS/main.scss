@@ -75,7 +75,7 @@
     }
 
     &-left {
-        width: calc(($containerWidth * 64.9) / 100);
+        width: calc(($containerWidth * 64.9) / 100 - 25px);
         min-height: 100%;
         border: 1px solid $border-color;
 
@@ -190,9 +190,70 @@
     &-right {
         position: fixed;
         width: calc($containerWidth - ($containerWidth * 64.9 / 100) - 30px);
-        top: 82px;
+        top: 102px;
         right: calc((100vw - $containerWidth) / 2);
-        border: 1px solid red;
+
+        &_head {
+            @include flex(space-between, center);
+            margin-bottom: 22px;
+
+            &-right-text {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 133%;
+                text-transform: capitalize;
+                color: $blue;
+            }
+
+            &-left {
+                @include flex(unset, center);
+
+                &-img {
+                    margin-right: 24px;
+                }
+
+                &-words {
+                    font-size: 14px;
+                    line-height: 129%;
+                }
+
+                &-title {
+                    font-weight: 600;
+                    text-transform: lowercase;
+                }
+
+                &-subtitle {
+                    font-weight: 400;
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        &_body {
+            position: relative;
+
+            &-way {
+                position: relative;
+
+                &-suggest {
+                    @include flex(space-between, center);
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    margin-bottom: 16px;
+
+                    &-title {
+                        font-size: 14px;
+                        line-height: 129%;
+                        color: $gray;
+                    }
+
+                    &-subtitle {
+                        font-size: 12px;
+                        line-height: 133%;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -215,12 +276,36 @@
         font-size: 14px;
         line-height: 129%;
         color: $lightbluea;
-    }
 
+        &:hover {
+            color: $blue;
+        }
+    }
 }
 
 .comment {
     text-align: center;
     padding-top: 7px;
 }
+
+.second-title {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 79%;
+    text-transform: lowercase;
+    margin-bottom: 10px;
+}
+
+.second-subtitle {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 92%;
+    color: $gray;
+    text-transform: none;
+}
+
 /*--- MAIN END ---*/
